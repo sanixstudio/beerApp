@@ -4,8 +4,11 @@ A simple beer application created with html, css and vanilla javascript. It make
 
 ## Collaborators
 
+![Herman](./assets/images/micky.png)
 [ **Michael F. Alvarez** ](https://www.linkedin.com/in/awwmicky/) |
+![Herman](./assets/images/hermy.png) 
 [ **Herman Liu** ](https://www.linkedin.com/in/hermanliu168/) |
+![Herman](./assets/images/adi.png)
 [ **Adnan Niaz** ](https://www.linkedin.com/in/adnanniaz77/)
 
 ## Key Features
