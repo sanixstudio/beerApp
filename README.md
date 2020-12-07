@@ -14,9 +14,8 @@ A simple beer application created with html, css and vanilla javascript. It make
 
 ## Tech Tools Used
 - Workflow: Github / GH Projects / Pull Requests / Git
-- Front-End: HTML / CSS / JS / Axios / Materialize
-- Back-End: Node / Express / Axios / API
-- Deploy: Heroku
+- Front-End: HTML / CSS / JS / Fetch
+- Deploy: Github Pages
 
 ## Third Party API Resources
 - https://api.punkapi.com/v2/beers
