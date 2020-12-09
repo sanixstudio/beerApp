@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>BeerApp</title>
+    <title>Beer App</title>
 </head>
 <body>
     
+    <header>
+        <h1>Beer App</h1>
+    </header>
+
+    <section class="filter">
+        <div class="filter-alcohol">
+            <h4>Alcohol Vol (ABV):</h4>
+            <div class="alcohol-levels">
+                <button id="all-alcohol">All</button>
+                <button id="alcohol-sm"><img src="./assets/images/beer-sm-a.png" alt="sm"></button>
+                <button id="alcohol-md"><img src="./assets/images/beer-md-a.png" alt="md"></button>
+                <button id="alcohol-lg"><img src="./assets/images/beer-lg-a.png" alt="lg"></button>
+            </div>
+        </div>
+        <div class="filter-hoppiness">
+            <h4>Hoppiness (IBU):</h4>
+            <div class="alcohol-levels">
+                <button id="all-alcohol">All</button>
+                <button id="alcohol-sm"><img src="./assets/images/hoppiness-sm.png" alt="sm"></button>
+                <button id="alcohol-md"><img src="./assets/images/hoppiness-md.png" alt="md"></button>
+                <button id="alcohol-lg"><img src="./assets/images/hoppiness-lg.png" alt="lg"></button>
+            </div>
+        </div>
+        
+        <div class="filter-pagination">
+            <h4>Page:</h4>
+            <div class="page-container">
+                <button id="pre-btn"><-</button>
+                <button id="next-btn">-></button>
+            </div>
+        </div>
+    </section>
+
+    <main class="beer-results">
+        <div class="card">
+            <div class="card-front">
+                <img src="https://images.punkapi.com/v2/keg.png" alt="card-img">
+                <h4>Buzz</h4>
+                <div class="content-levels">
+                    <p class="abv">ABV: <span id="abv">4.5</span>%</p>
+                    <p class="ibu">IBU: <span id="ibu">60</span></p>
+                </div>
+            </div>
+            <div class="card-back">
+                <h4>Buzz</h4>
+                <p class="tagline">A Real Bitter Experience</p>
+                <div class="hr"></div>
+                <p class="description">A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
+                <i class="food-pair">Pair with: Spicy chicken tikka masala, Grilled chicken quesadilla, Caramel toffee cake</i>
+            </div>
+        </div>
+    </main>
+
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
