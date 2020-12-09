@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>Beer App</title>
 </head>
 <body>
@@ -13,30 +16,30 @@
     </header>
 
     <section class="filter">
-        <div class="filter-alcohol">
+        <div class="filteration filter-alcohol">
             <h4>Alcohol Vol (ABV):</h4>
-            <div class="alcohol-levels">
-                <button id="all-alcohol">All</button>
-                <button id="alcohol-sm"><img src="./assets/images/beer-sm-a.png" alt="sm"></button>
-                <button id="alcohol-md"><img src="./assets/images/beer-md-a.png" alt="md"></button>
-                <button id="alcohol-lg"><img src="./assets/images/beer-lg-a.png" alt="lg"></button>
+            <div class="container alcohol-levels">
+                <a id="all-alcohol">All</a>
+                <a id="alcohol-sm"><img src="./assets/images/beer-sm-a.png" alt="sm"></a>
+                <a id="alcohol-md"><img src="./assets/images/beer-md-a.png" alt="md"></a>
+                <a id="alcohol-lg"><img src="./assets/images/beer-lg-a.png" alt="lg"></a>
             </div>
         </div>
-        <div class="filter-hoppiness">
+        <div class="filteration filter-hoppiness">
             <h4>Hoppiness (IBU):</h4>
-            <div class="alcohol-levels">
-                <button id="all-alcohol">All</button>
-                <button id="alcohol-sm"><img src="./assets/images/hoppiness-sm.png" alt="sm"></button>
-                <button id="alcohol-md"><img src="./assets/images/hoppiness-md.png" alt="md"></button>
-                <button id="alcohol-lg"><img src="./assets/images/hoppiness-lg.png" alt="lg"></button>
+            <div class="container hoppiness-levels">
+                <a id="all-hoppiness">All</a>
+                <a id="hoppiness-sm"><img src="./assets/images/hoppiness-sm.png" alt="sm"></a>
+                <a id="hoppiness-md"><img src="./assets/images/hoppiness-md.png" alt="md"></a>
+                <a id="hoppiness-lg"><img src="./assets/images/hoppiness-lg.png" alt="lg"></a>
             </div>
         </div>
         
-        <div class="filter-pagination">
+        <div class="filteration filter-pagination">
             <h4>Page:</h4>
-            <div class="page-container">
-                <button id="pre-btn"><-</button>
-                <button id="next-btn">-></button>
+            <div class="container page-container">
+                <a id="pre-btn"><-</a>
+                <a id="next-btn">-></a>
             </div>
         </div>
     </section>
