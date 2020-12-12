@@ -1,8 +1,7 @@
 // [x] test fecth API call
 // apply to alchohol filter triggers
 
-// const sq = document.querySelector;
-const beerResults = document.querySelector('.beer-results');
+const $ = (elm) => document.querySelector(elm);
 const print = console.log;
 const BASE_URL = 'https://api.punkapi.com/v2/beers';
 
@@ -15,7 +14,8 @@ async function fetchBeers () {
         const dishes = `Pair with: ${food_item_1}, ${food_item_2}, and ${food_item_3}`;
 
         // assign to card
-        beerResults.innerHTML += (`
+        // beerResults.innerHTML += (`
+        $('.beer-results').innerHTML += (`
             <div class="card">
                 <div class="card-front">
                     <img src="${ image_url }" alt="card-img">
