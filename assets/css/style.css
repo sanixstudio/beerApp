@@ -41,6 +41,7 @@ header {
     margin-bottom: 10px;
 }
 
+
 .container {
     /* border: solid 1px red; */
     padding: 10px;
@@ -63,8 +64,8 @@ header {
     align-items: center;
     text-decoration: none;
 }
-.container a:hover { 
-    color: white;
+.container button:hover { 
+    color: black;
 }
 .container img {
     filter: grayscale(100%);
@@ -78,11 +79,22 @@ header {
     object-fit: contain;
 }
 
-.page-container a {
+.page-container button {
     border: 1px solid white;
     border-radius: 30px;
     margin: 0 10px;
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    outline: none;
+    color: deepskyblue;
+    cursor: pointer;
+}
+
+.page-container button:disabled {
+    color: darkgray;
+    cursor: not-allowed;
+    /* pointer-events: none; */
 }
 
 @media screen and (max-width: 900px) {
