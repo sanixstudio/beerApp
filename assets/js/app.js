@@ -114,3 +114,34 @@ nextButton.addEventListener('click', () => {
     fetchBeers(`${BASE_URL + '?page=' + page}`)
     print(`${BASE_URL + '?page=' + page}`)
 })
+
+const abvFilterBtns = $$('.alcohol-levels .filterBtn')
+const ibuFilterBtns = $$('.hoppiness-levels .filterBtn')
+
+abvFilterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const target = e.target.closest("img")
+        const active = $('.alcohol-levels .active');
+        
+        if (active) {
+            active.classList.remove('active')
+        }
+
+        target.classList.add('active')
+
+    })
+})
+
+ibuFilterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const target = e.target.closest("img")
+        const active = $('.hoppiness-levels .active');
+        
+        if (active) {
+            active.classList.remove('active')
+        }
+
+        target.classList.add('active')
+
+    })
+})
