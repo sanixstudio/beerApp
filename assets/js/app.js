@@ -5,17 +5,22 @@
 const $ = (elm) => document.querySelector(elm);
 const $$ = (elm) => document.querySelectorAll(elm);
 
+let abvLevel = "";
+let ibuLevel = "";
+
 const print = console.log;
+// URL.com/?pagination= &abv= &ibu
 const BASE_URL = 'https://api.punkapi.com/v2/beers';
 const placeholder = `https://demofree.sirv.com/nope-not-here.jpg`
 
-const SM_ALC_URL = `${BASE_URL}/?abv_lt=4.6`;
-const MD_ALC_URL = `${BASE_URL}/?abv_gt=4.5&abv_lt=7.6`;
-const LG_ALC_URL = `${BASE_URL}/?abv_gt=7.5`;
-
-const SM_IBU_URL = `${BASE_URL}/?ibu_lt=35`;
-const MD_IBU_URL = `${BASE_URL}/?ibu_gt=34&ibu_lt=75`;
-const LG_IBU_URL = `${BASE_URL}/?ibu_gt=74`;
+const levels = {
+    smAbv: "&abv_lt=4.6",
+    mdAbv: "&abv_gt=4.5&abv_lt=7.6",
+    lgAbv: "&abv_gt=7.5",
+    smIbu: "&ibu_lt=35",
+    mdIbu: "&ibu_gt=34&ibu_lt=75",
+    lgIbu: "&ibu_gt=74"
+}
 
 const alcoholAll = $('#all-alcohol');
 const alcoholSm = $('#alcohol-sm');
@@ -91,28 +96,92 @@ async function fetchBeers (url) {
 
 fetchBeers(BASE_URL)
 
-alcoholAll.addEventListener('click', () => fetchBeers(BASE_URL))
-alcoholSm.addEventListener('click', () => fetchBeers(SM_ALC_URL))
-alcoholMd.addEventListener('click', () => fetchBeers(MD_ALC_URL))
-alcoholLg.addEventListener('click', () => fetchBeers(LG_ALC_URL))
+alcoholAll.addEventListener('click', () => {
+    abvLevel = "";
+    page = 1;
+    pageNumber.textContent = page;
+    let pageNum = "?page=" + page
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
 
-hoppinessAll.addEventListener('click', () => fetchBeers(BASE_URL))
-hoppinessSm.addEventListener('click', () => fetchBeers(SM_IBU_URL))
-hoppinessMd.addEventListener('click', () => fetchBeers(MD_IBU_URL))
-hoppinessLg.addEventListener('click', () => fetchBeers(LG_IBU_URL))
+// smAbv
+alcoholSm.addEventListener('click', () => {
+    abvLevel = levels.smAbv
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
 
+// mdAbv
+alcoholMd.addEventListener('click', () => {
+    abvLevel = levels.mdAbv
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+// lgAbv
+alcoholLg.addEventListener('click', () => {
+    abvLevel = levels.lgAbv
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+hoppinessAll.addEventListener('click', () => {
+    ibuLevel = "";
+    page = 1;
+    let pageNum = "?page=" + page
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+// smIbu
+hoppinessSm.addEventListener('click', () => {
+    ibuLevel = levels.smIbu
+    page = 1;
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+// mgIbu
+hoppinessMd.addEventListener('click', () => {
+    ibuLevel = levels.mdIbu
+    page = 1;
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+// lgIbu
+hoppinessLg.addEventListener('click', () => {
+    ibuLevel = levels.lgIbu
+    page = 1;
+    let pageNum = "?page=" + page 
+    pageNumber.textContent = page;
+    fetchBeers(BASE_URL + pageNum + abvLevel + ibuLevel)
+    print(BASE_URL + pageNum + abvLevel + ibuLevel)
+})
+
+// pagination
 prevButton.addEventListener('click', () => {
     page--;
     pageNumber.textContent = page;
-    fetchBeers(`${BASE_URL + '?page=' + page}`)
-    print(`${BASE_URL + '?page=' + page}`)
+    fetchBeers(`${BASE_URL + '?page=' + page + abvLevel + ibuLevel}`)
+    print(`${BASE_URL + '?page=' + page + abvLevel + ibuLevel}`)
 })
 
 nextButton.addEventListener('click', () => {
     page++;
     pageNumber.textContent = page;
-    fetchBeers(`${BASE_URL + '?page=' + page}`)
-    print(`${BASE_URL + '?page=' + page}`)
+    fetchBeers(`${BASE_URL + '?page=' + page + abvLevel + ibuLevel}`)
+    print(`${BASE_URL + '?page=' + page + abvLevel + ibuLevel}`)
 })
 
 const abvFilterBtns = $$('.alcohol-levels .filterBtn')
