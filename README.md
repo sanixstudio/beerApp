@@ -9,7 +9,7 @@ A simple beer application created with HTML, CSS, and vanilla javascript. It mak
 ![Herman](./assets/images/hermy.png) 
 [ **Herman Liu** ](https://www.linkedin.com/in/hermanliu168/) |
 ![Herman](./assets/images/adi.png)
-[ **Adnan Niaz** ](https://www.linkedin.com/in/adnanniaz77/)
+[ **Adnan Niaz** ](https://www.linkedin.com/in/sanixstudio)
 
 ## Key Features
 - Call third party [API](https://api.punkapi.com/v2/beers) and get the results as response.
@@ -20,5 +20,5 @@ A simple beer application created with HTML, CSS, and vanilla javascript. It mak
 - Front-End: HTML / CSS / JS / Fetch
 - Deploy: Github Pages
 
-## Third Party API Resources
+## Third-Party API Resources
 - https://api.punkapi.com/v2/beers
