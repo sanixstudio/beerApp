@@ -6,8 +6,6 @@ A simple beer application created with HTML, CSS, and vanilla javascript. It mak
 
 ![Herman](./assets/images/micky.png)
 [ **Michael F. Alvarez** ](https://www.linkedin.com/in/awwmicky/) |
-![Herman](./assets/images/hermy.png) 
-[ **Herman Liu** ](https://www.linkedin.com/in/hermanliu168/) |
 ![Herman](./assets/images/adi.png)
 [ **Adnan Niaz** ](https://www.linkedin.com/in/sanixstudio)
 
